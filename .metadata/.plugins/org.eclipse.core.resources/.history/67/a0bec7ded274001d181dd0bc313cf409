@@ -1,0 +1,5 @@
+package rutas.uacm.models.repository;
+
+public interface ITipoTransporteRepository extends MongoRepository<Estudiante, String> {
+	TipoTransporte findByCorreo(String correo);
+}

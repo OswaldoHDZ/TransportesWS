@@ -1,0 +1,40 @@
+package eventos.uacm.models.document.service.imp;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import eventos.uacm.models.document.TipoEvento;
+import eventos.uacm.models.document.service.TipoEventoService;
+
+@Service
+public class TipoEventoServiceImp implements TipoEventoService{
+	
+	@Autowired
+	ITipoEventoRepository tipoEventoRepository;
+	@Override
+	public List<TipoEvento> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TipoEvento buscarId(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TipoEvento insertar(TipoEvento tipoEvento) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void eliminar(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

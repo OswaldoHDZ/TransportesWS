@@ -1,0 +1,9 @@
+package rutas.uacm.models.service;
+
+public interface ITipoTransporteService {
+	List<TipoTransporte> obtenerTodos();
+	TipoTransporte buscarId(String id);
+	TipoTransporte insertar(TipoTransporte estudiante);
+	void eliminar(String id);
+	TipoTransporte buscarCorreo(String correo);
+}

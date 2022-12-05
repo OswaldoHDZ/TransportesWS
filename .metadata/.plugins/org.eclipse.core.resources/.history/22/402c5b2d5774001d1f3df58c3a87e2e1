@@ -1,0 +1,5 @@
+package reservaciones.uacm.models.document;
+
+public class Reservacion {
+
+}

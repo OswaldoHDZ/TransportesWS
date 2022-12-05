@@ -1,0 +1,46 @@
+package rutas.uacm.controllers;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import rutas.uacm.models.service.ITipoTransporteService;
+
+
+@RestController
+public class TipoTransporteController {
+	
+	
+	@Autowired
+	ITipoTransporteService _tipoTransporteService;
+	
+	
+	@GetMapping("/est/listar")
+	public List<TipoTransporte> getAll(){
+		return estudianteService.obtenerTodos();
+		
+	}
+	@GetMapping("/est/buscar/{id}")
+	public TipoTransporte buscarId(@PathVariable String id) {
+		return estudianteService.buscarId(id);
+	}
+	
+	@GetMapping("/est/eliminar/{id}")
+	public void eliminaEstuadianteId(@PathVariable String id) {
+		estudianteService.eliminar(id);
+	}
+	
+	@PostMapping("/est/agrega")
+	public TipoTransporte agregaEstuadiante(@RequestBody TipoTransporte tipoTransporte) {		
+		return estudianteService.insertar(tipoTransporte);
+	}
+}

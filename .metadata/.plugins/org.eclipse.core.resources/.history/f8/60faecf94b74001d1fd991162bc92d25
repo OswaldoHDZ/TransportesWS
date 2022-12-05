@@ -1,0 +1,41 @@
+package eventos.uacm.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.uacm.sistema.transporte.models.document.EventoTransporte;
+import com.uacm.sistema.transporte.models.service.IEventoTransporteService;
+
+@RestController
+public class EventoTransporteController {
+	
+	@Autowired
+	IEventoTransporteService _eventoTransporteService;
+	
+	
+	@GetMapping("/eventTransporte/listar")
+	public List<EventoTransporte> getAll(){
+		return _eventoTransporteService.obtenerTodos();	
+	}
+	
+	@GetMapping("/eventTransporte/buscar/{id}")
+	public EventoTransporte buscarId(@PathVariable String id) {
+		return _eventoTransporteService.buscarId(id);
+	}
+	
+	@GetMapping("/eventTransporte/eliminar/{id}")
+	public void eliminaEventoTransporte(@PathVariable String id) {
+		_eventoTransporteService.eliminar(id);
+	}
+	
+	@PostMapping("/eventTransporte/agrega")
+	public EventoTransporte agregaEventoTransporte(@RequestBody EventoTransporte pEventoTransporte) {
+		return _eventoTransporteService.insertar(pEventoTransporte);
+	}
+}

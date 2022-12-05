@@ -1,0 +1,7 @@
+package rutas.uacm.models.service.imp;
+
+import rutas.uacm.models.service.IParadaHorarioService;
+
+public class ParadaHorarioServiceImp implements IParadaHorarioService{
+
+}

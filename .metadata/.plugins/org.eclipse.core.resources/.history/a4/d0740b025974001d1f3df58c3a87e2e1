@@ -1,0 +1,13 @@
+package eventos.uacm.models.document.service.imp;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import eventos.uacm.models.document.TipoEvento;
+import eventos.uacm.models.document.service.TipoEventoService;
+
+@Service
+public class TipoEventoServiceImp implements TipoEventoService{
+
+}

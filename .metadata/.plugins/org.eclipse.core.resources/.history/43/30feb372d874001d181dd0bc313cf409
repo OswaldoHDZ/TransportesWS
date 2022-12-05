@@ -1,0 +1,10 @@
+package rutas.uacm.models.service;
+
+import java.util.List;
+
+public interface IUnidadTransporteService {
+	List<TipoTransporte> obtenerTodos();
+	TipoTransporte buscarId(String id);
+	TipoTransporte insertar(TipoTransporte tipoTransporte);
+	void eliminar(String id);
+}

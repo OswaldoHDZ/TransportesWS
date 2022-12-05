@@ -1,0 +1,8 @@
+package rutas.uacm.models.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+
+public class ParadaHorarioRepository extends MongoRepository<ParadaHorario, String>{
+
+}

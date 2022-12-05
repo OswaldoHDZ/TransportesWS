@@ -1,0 +1,5 @@
+package eventos.uacm.models.repository;
+
+public class IEventoTransporteRepository {
+
+}

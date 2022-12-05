@@ -1,0 +1,39 @@
+package reservaciones.uacm.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.uacm.sistema.transporte.models.document.Reservacion;
+import com.uacm.sistema.transporte.models.service.impl.ReservacionServiceImpl;
+
+@RestController
+public class ReservacionController {
+	@Autowired
+	ReservacionServiceImpl _reservacionServiceImpl;
+	
+	@GetMapping("/reserv/listar")
+	public List<Reservacion> getAll(){
+		return _reservacionServiceImpl.obtenerTodos();
+	}
+	
+	@GetMapping("/reserv/buscar/{id}")
+	public Reservacion buscarId(@PathVariable String id) {
+		return _reservacionServiceImpl.buscarId(id);
+	}
+	
+	@GetMapping("/reserv/eliminar/{id}")
+	public void eliminaReservacionId(@PathVariable String id) {
+		_reservacionServiceImpl.eliminar(id);
+	}
+	
+	@PostMapping("/reserv/agrega")
+	public Reservacion agregaReservacion(@RequestBody Reservacion estudiante) {
+		return this._reservacionServiceImpl.insertar(estudiante);
+	}
+}

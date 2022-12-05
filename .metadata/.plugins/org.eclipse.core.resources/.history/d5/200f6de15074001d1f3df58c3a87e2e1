@@ -1,0 +1,30 @@
+package eventos.uacm;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import eventos.uacm.models.document.EventoTransporte;
+
+@SpringBootApplication
+public class WsEventosTranporteUacmApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(WsEventosTranporteUacmApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		mongo.dropCollection("eventos_transporte");
+		if(!mongo.collectionExists("estudiantes")) {
+			EventoTransporte et1 = new EventoTransporte();
+			et1.setTipoEvento(1);
+			et1.setDescripcionEvento("SUBIDA");
+			//et1.setFecha(new Date());
+			et1.setInfoAdicional("no presento credencial");
+			et1.setEstudiante( "1234567" );
+			eventoTransporteService.insertar(et1);
+		}
+	}
+
+}

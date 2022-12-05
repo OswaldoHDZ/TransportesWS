@@ -1,0 +1,5 @@
+package eventos.uacm.models.document;
+
+public class EventoTransporte {
+
+}

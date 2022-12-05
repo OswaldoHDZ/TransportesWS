@@ -1,0 +1,20 @@
+package rutas.uacm.models.service.imp;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import rutas.uacm.models.document.Ruta;
+import rutas.uacm.models.document.RutaParada;
+import rutas.uacm.models.repository.IUnidadTransporteRepository;
+import rutas.uacm.models.repository.RutaParadaRepository;
+
+public class RutaParadaServiceImp implements IRutaParadaService{
+
+	@Autowired
+	RutaParadaRepository _rutaParadaRepository;
+
+	
+
+
+}

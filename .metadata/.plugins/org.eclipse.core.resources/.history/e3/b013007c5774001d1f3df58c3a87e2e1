@@ -1,0 +1,5 @@
+package reservaciones.uacm.repository;
+
+public class IReservacionRepository {
+
+}
