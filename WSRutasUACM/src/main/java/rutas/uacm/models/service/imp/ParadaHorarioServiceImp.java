@@ -3,11 +3,12 @@ package rutas.uacm.models.service.imp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import rutas.uacm.models.document.ParadaHorario;
 import rutas.uacm.models.repository.ParadaHorarioRepository;
 import rutas.uacm.models.service.IParadaHorarioService;
-
+@Service
 public class ParadaHorarioServiceImp implements IParadaHorarioService{
 
 	@Autowired
