@@ -1,8 +1,0 @@
-package rutas.uacm.models.service.imp;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class UnidadTransporteServiceImp implements {
-
-}

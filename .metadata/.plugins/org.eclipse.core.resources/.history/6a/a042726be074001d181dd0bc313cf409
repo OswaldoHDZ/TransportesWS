@@ -1,7 +1,0 @@
-package rutas.uacm.models.service.imp;
-
-import rutas.uacm.models.service.IRutaService;
-
-public class RutaServiceImp implements IRutaService{
-
-}

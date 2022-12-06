@@ -1,5 +1,0 @@
-package reservaciones.uacm.models.service;
-
-public class IReservacionService {
-
-}

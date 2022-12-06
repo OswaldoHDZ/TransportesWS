@@ -1,9 +1,0 @@
-package reservaciones.uacm.repository;
-
-import org.springframework.data.mongodb.repository.MongoRepository;
-
-import com.uacm.sistema.transporte.models.document.Reservacion;
-
-public interface IReservacionRepository extends MongoRepository<Reservacion, String>{
-
-}

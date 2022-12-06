@@ -1,8 +1,0 @@
-package eventos.uacm.models.repository;
-
-import org.springframework.data.mongodb.repository.MongoRepository;
-
-
-public interface IEventoTransporteRepository extends MongoRepository<EventoTransporte, String>{
-
-}

@@ -1,5 +1,0 @@
-package reservaciones.uacm.models.service.imp;
-
-public class ReservacionServiceImpl {
-
-}

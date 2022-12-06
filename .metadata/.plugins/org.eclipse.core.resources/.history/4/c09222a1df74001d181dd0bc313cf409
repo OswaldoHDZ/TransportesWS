@@ -1,5 +1,0 @@
-package rutas.uacm.models.repository;
-
-public interface IRutaRepository {
-
-}

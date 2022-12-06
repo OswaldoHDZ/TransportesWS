@@ -1,5 +1,0 @@
-package eventos.uacm.models.document.service.imp;
-
-public class EventoTransporteServiceImpl {
-
-}

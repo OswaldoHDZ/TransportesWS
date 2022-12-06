@@ -1,5 +1,0 @@
-package rutas.uacm.models.service;
-
-public interface IParadaHorarioService {
-
-}
