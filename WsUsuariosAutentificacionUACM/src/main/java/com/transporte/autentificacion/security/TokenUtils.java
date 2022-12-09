@@ -18,8 +18,6 @@ public class TokenUtils {
 	
 	public static String createToken(String nombre, String email) {
 		
-		System.out.println(nombre);
-		System.out.println(email);
 		long tiempoExpiracion = ACCES_TOKEN_VALIDITY_SECONDS * 1_000;
 		Date fechaExpiracion = new Date(System.currentTimeMillis() + tiempoExpiracion);
 		

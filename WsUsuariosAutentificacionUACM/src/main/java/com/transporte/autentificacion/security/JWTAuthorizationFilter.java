@@ -22,7 +22,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter{
 
 
 		String beaterToken = request.getHeader("Authorization");
-		
+		System.out.println("Verificamos el TOKEN");
 		if(beaterToken != null && beaterToken.startsWith("Bearer ")) {
 			String token = beaterToken.replace("Bearer ", "");
 			UsernamePasswordAuthenticationToken usernamePAT = TokenUtils.getAutentication(token);
