@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import lombok.Data;
 
 @Data
-@Document(collection="estudiante")
+@Document(collection="estudiantes")
 public class Estudiante {
 	@Id
 	private String id;
