@@ -6,20 +6,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import lombok.Data;
-
 @Data
-@Document(collection="estudiante")
-public class Estudiante {
+@Document(collection="usuarios")
+public class Usuario {
 	@Id
 	private String id;
 	private String nombre;
-	private String appaterno;
-	private String apmaterno;
-	private String matricula;
-	@Field("correo")
+	@Field("email")
 	@Indexed(unique = true)
-	private String correo;	
-	private String telefono;
-	private Integer estado;
-	
+	private String email;
+	private String password;
 }
